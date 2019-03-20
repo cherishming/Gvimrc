@@ -1,0 +1,81 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"font
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+set guifont=Courier_New:h12:cANSI,Consolas:h12,Dejavu_Sans_Mono:h12,Liberation_Mono:h14
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"colorschme
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set background=dark
+colorscheme  molokai "solarized
+set t_Co=256
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"use mouse
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set mouse=a
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"set line number
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set number
+set relativenumber
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"reset vim
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <leader>rr :source D:\gvim_8.1.0635_x64\vim\_vimrc<cr> 
+""""""""""""""""""""""""""""""
+"buftabline
+""""""""""""""""""""""""""""""
+set hidden
+nnoremap <c-j> :bnext<cr>
+nnoremap <c-k> :bprev<cr>
+
+""""""""""""""""""""""""""""""
+"tagbar
+""""""""""""""""""""""""""""""
+autocmd vimenter * TagbarToggle 
+map <silent> <leader>b :TagbarToggle<cr>
+" let g:tagbar_ctags_bin = 'D:\gvim_8.1.0635_x64\vim\vim81\my_plugins\ctags58'
+" let g:tagbar_left = 1
+" let g:tagbar_width =20 
+" let g:tagbar_autofocus =1 
+" let g:tagbar_sort = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"neocomplete
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:neocomplete#enable_at_startup = 1
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"tabular
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"vmap <c--> :'<,'>Tabularize /--<cr>
+"vmap <c-=> :'<,'>Tabularize /=<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"indentLine
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:indentLine_noConcealCursor = 1
+let g:indentLine_color_term = 0
+let g:indentLine_char = '|'
+
+
+set nofixendofline 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Plug
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+ " Plugins will be downloaded under the specified directory.
+call plug#begin('~/.vim_runtime/my_plugins')
+"Declare the list of plugins
+Plug 'ap/vim-buftabline'
+Plug 'majutsushi/tagbar'
+Plug 'Shougo/neocomplete.vim'
+Plug 'godlygeek/tabular'
+Plug 'Yggdroot/indentLine'
+Plug 'rking/ag.vim'
+" List ends here. Plugins become visible to Vim after this callt.
+call plug#end()
