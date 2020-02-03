@@ -28,6 +28,8 @@
 "use mouse
 set mouse=a
 
+set lines=50
+set columns=200
 "set line number
 set number
 set relativenumber
@@ -208,8 +210,8 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " => Moving around, tabs, windows and buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Map <Space> to / (search) and Ctrl-<Space> to ? (backwards search)
-map <space> /
-map <c-space> ?
+map <space> 5j
+map <s-space> 5k
 
 " Disable highlight when <leader><cr> is pressed
 map <silent> <leader><cr> :noh<cr>

@@ -17,6 +17,7 @@ Plug 'Shougo/neocomplete.vim'
 Plug 'godlygeek/tabular'
 Plug 'Yggdroot/indentLine'
 Plug 'rking/ag.vim'
+Plug 'tacahiroy/ctrlp-funky'
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()
 
