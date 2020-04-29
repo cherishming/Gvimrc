@@ -20,7 +20,7 @@ set mouse=a
 "set line number
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
-set relativenumber
+set relativenumber!
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "reset vim
@@ -36,14 +36,13 @@ nnoremap <c-k> :bprev<cr>
 """"""""""""""""""""""""""""""
 "tagbar
 """"""""""""""""""""""""""""""
-"autocmd vimenter * TagbarToggle 
-"map <silent> <leader>b :TagbarToggle<cr>
-nmap <F8> :TagbarToggle<CR>
+autocmd vimenter * TagbarToggle 
+map <leader>b :TagbarToggle<cr>
 let g:tagbar_ctags_bin = '$VIMRUNTIME\my_plugins\ctags58\ctags.exe'
-" let g:tagbar_left = 1
-" let g:tagbar_width =20 
-" let g:tagbar_autofocus =1 
-" let g:tagbar_sort = 0
+let g:tagbar_right = 1
+let g:tagbar_width =20 
+let g:tagbar_autofocus =1 
+let g:tagbar_sort = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "neocomplete
